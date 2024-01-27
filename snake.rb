@@ -1,5 +1,11 @@
 class Snake
     attr_reader :size, :direction, :position, :parts
+
+    
+    # initialize – creates start parameters for 
+    # the Snake, sets start position and creates the Snake.
+    
+
     def initialize(max_x, max_y)
       @size = 4
       @direction = :left
@@ -7,17 +13,24 @@ class Snake
       set_start_position(max_x, max_y)
       create_snake
     end
-  
+    
+    # create_snake - creates Snake, using `size` variable to
+    # define Snake's length.
+
     def create_snake
       size.times do |iteration|
         @parts &lt;&lt; [position[0], position[1]+iteration]
       end
     end
-  
+    
+    # head- returns part of the Snake
+    
     def head
       parts.first
     end
-  
+
+    # body - returns all other pars, that you can call as body
+
     def body
       parts[1..parts.length-1]
     end
