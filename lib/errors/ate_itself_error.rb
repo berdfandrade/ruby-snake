@@ -1,2 +1,2 @@
-class AteItselfError &lt; StandardError;
-end 
+class AteItselfError &lt; StandardError; 
+end
